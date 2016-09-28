@@ -63,6 +63,7 @@
 #define TM1829   0x04 // 800 KHz datastream ()
 #define WS2812B2 0x05 // 800 KHz datastream (NeoPixel)
 #define SK6812RGBW 0x06 // 800 KHz datastream (NeoPixel RGBW)
+#define WS2812BSRS 0x07 // Reverse colors
 
 class Adafruit_NeoPixel {
 
