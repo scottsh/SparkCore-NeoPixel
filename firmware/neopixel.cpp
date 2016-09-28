@@ -131,6 +131,7 @@ void Adafruit_NeoPixel::show(void) {
         wait_time = 500L;
       } break;
     case WS2812B: // WS2812 & WS2812B = 50us reset pulse
+    case WS2812BSRS:
     case WS2812B2:
     case WS2811: // WS2811 = 50us reset pulse
     default: {   // default = 50us reset pulse
@@ -156,7 +157,7 @@ void Adafruit_NeoPixel::show(void) {
     b,              // Current blue byte value
     w;              // Current white byte value
 
-  if(type == WS2812B) { // same as WS2812, 800 KHz bitstream
+  if(type == WS2812B || type == WS2812BSRS) { // same as WS2812, 800 KHz bitstream
     while(i) { // While bytes left... (3 bytes = 1 pixel)
       mask = 0x800000; // reset the mask
       i = i-3;      // decrement bytes remaining
