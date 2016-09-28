@@ -842,6 +842,11 @@ void Adafruit_NeoPixel::setPixelColor(
         *p++ = r;
         *p = b;
         break;
+      case WS2812BSRS:
+        *p++ = r;
+        *p++ = g;
+        *p = b;
+        break;
       case TM1829: // TM1829 is special RBG order
         if(r == 255) r = 254; // 255 on RED channel causes display to be in a special mode.
         *p++ = r;
